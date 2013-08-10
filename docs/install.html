@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Upload script for CKEditor</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Upload script for CKEditor</h1>
+
+<h2>Introduction</h2>
+<p>This is a basic PHP script to implement quick file uploads in <a href="http://www.ckeditor.com">CKEditor</a> as described in <a href="http://docs.cksource.com/CKEditor_3.x/Developers_Guide/File_Browser_%28Uploader%29/Custom_File_Browser">its documentation</a>.</p>
+
+<h3 id="contact">Author:</h3>
+<p><a href="mailto:amla70@gmail.com">Alfonso Mart&iacute;nez de Lizarrondo</a></p>
+
+<h2>Installation</h2>
+<h3>1. Configuration</h3>
+<p>Before adding the upload.php file to your server, open it with a text editor and at the start you can see 3 steps that must be performed:
+<ol>
+	<li>Authentication: Verify that the user is allowed to use the script. If you are not careful any robot will use your script to upload files to your server. And then they might be able to execute code on your server, well, this is not longer your server, it's <em>their</em>server.</li>
+	<li>Server upload path: Put here the path to the server folder where you want to store the uploads</li>
+	<li>Url: Put the public URL that maps to the previous folder</li>
+</ol>
+
+<h3>2. Copying the files</h3>
+<p>Copy the upload.php to a folder in your server that it's accesible to the users that are allowed to upload files. Be careful, many malicious robots will try to look for common folder and script names like "upload", "CKEditor", etc... If the script is secured properly this shouldn't be a problem, but there are always unexpected bugs everywhere so it's better to close as many doors as possible. You can even use another name for the script itself.
+</p>
+
+<h3>3. Adding it to CKEditor</h3>
+<p>Now put the path of this script in your CKEditor configuration. If you have placed it in "/uploader/upload.php" then just state that:
+<code>config.filebrowserUploadUrl ='/uploader/upload.php'; </code>
+</p>
+<p>Clear your cache and load CKEditor now. If you have made this last change correctly now when you open the image dialog you should see the Upload tab as shown in <a href="http://docs.cksource.com/CKEditor_3.x/Developers_Guide/File_Browser_%28Uploader%29">the first image here</a>
+<p>Select that tab and use the "select file" and "upload to server buttons". If you have made the changes in the upload.php file correctly (and the path set in filebrowserUploadUrl is also correct) then the file will be uploaded and its url will be shown in the first tab of the Image dialog</p>
+
+<h2>Disclaimers</h2>
+<p>CKEditor is  &copy; CKSource.com</p>
+<p>This script is provided "as is", I'm not responsible for any problem due to its usage or misconfiguration.</p>
+</body>
+</html>
