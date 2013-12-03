@@ -25,7 +25,7 @@ ol {
 ol li {
 	margin:0.2em 0;
 }
-pre, code {
+pre{
 	font-size:100%;
 	font-family:"Courier New", Courier, mono;
 	background-color: #CCCCCC;
@@ -35,6 +35,12 @@ pre, code {
 	display:block;
 	white-space: pre;
 	overflow: auto;
+}
+code {
+	background-color: #e5e5e5;
+	font-size:100%;
+	font-family:"Courier New", Courier, mono;
+	padding:0 0.2em;
 }
 form {
 	margin:0 0 0 1em;

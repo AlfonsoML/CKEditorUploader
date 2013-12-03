@@ -1,7 +1,7 @@
 Upload script for CKEditor
 
 Introduction
-This is a basic PHP script to implement quick file uploads in CKEditor as described in its documentation.
+This is a basic set of scripts in PHP, C# and Vb.net to implement quick file uploads in CKEditor as described in its documentation.
 
 Please, refer to the docs/install.html file in order to learn how to use it.
 
