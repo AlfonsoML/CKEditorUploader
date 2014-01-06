@@ -14,8 +14,8 @@ response.write processUpload()
     Function processUpload()
         ' Step 1: change the true for whatever condition you use in your environment to verify that the user
         ' is logged in and is allowed to use the script
-		if (true)
-			processUpload =  "You're not allowed to upload files"
+		if (true) then
+			processUpload =  sendError("You're not allowed to upload files")
 			exit function
 		end if
 
